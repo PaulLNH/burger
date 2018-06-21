@@ -23,13 +23,14 @@
                     <input type="text" id="bu" name="name">
                 </div>
 
-                <button type="submit">Add</button>
+                <button type="submit" class="btn btn-primary">Add</button>
+
             </form>
         </div>
         <hr>
 
-        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center">
-            <h2>Wish List:</h2>
+        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+            <h2 class="text-center">Wish List:</h2>
 
             <ul>
                 {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block eat=true}} {{/unless}} {{/each}}
@@ -37,13 +38,17 @@
         </div>
         <hr>
 
-        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center">
-            <h2>Ate:</h2>
+        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+            <h2 class="text-center">Ate:</h2>
 
             <ul>
                 {{#each burgers}} {{#if devoured}} {{> burgers/burger-block eat=false}} {{/if}} {{/each}}
             </ul>
         </div>
     </div>
-
+    <footer class="text-center pt-2">
+        Copyright
+        <i class="fa fa-copyright" aria-hidden="true"></i> 2018 by
+        <a href="https://www.linkedin.com/in/paul-laird/" target="_blank">Paul Laird</a>, all rights reserved.
+    </footer>
 </div>

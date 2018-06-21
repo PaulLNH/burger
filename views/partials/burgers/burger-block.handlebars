@@ -1,9 +1,9 @@
 <li>
-    {{name}} {{#unless devoured}}
-    <button class="change-eat" data-id="{{id}}" data-neweat="{{eat}}">
-        {{#if eat}}Eat{{/if}}
+    {{#unless devoured}}
+    <button class="change-eat btn btn-success" data-id="{{id}}" data-neweat="{{eat}}">
+        {{#if eat}}{{this.name}}{{/if}}
     </button>
     {{/unless}} {{#if devoured}}
-    <button class="delete-burger" data-id="{{this.id}}"> Clean plate</button>
+    <button class="delete-burger btn btn-danger" data-id="{{this.id}}"> {{this.name}}</button>
     {{/if}}
 </li>

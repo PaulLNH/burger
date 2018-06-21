@@ -10,10 +10,22 @@ body {
     color: white;
 }
 
+footer {
+    color: white;
+}
+
+a {
+    color: #d9b310;
+}
+
+a:hover {
+    color: #d9b310;
+}
+
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    list-style-type: none;
 }
 
 .label {
@@ -28,9 +40,9 @@ li {
 .burger-controls {
     padding: 10px;
     background: white;
-    opacity: .75;
+    opacity: .90;
 }
 
 .form-group {
-    margin-bottom: 5px;
+    margin: 5px;
 }
