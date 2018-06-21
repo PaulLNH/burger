@@ -6,7 +6,7 @@ const connection = require("../config/connection.js");
 // In order to write the query, we need 3 question marks.
 // The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
 // ["?", "?", "?"].toString() => "?,?,?";
-var printQuestionMarks = num => {
+function printQuestionMarks(num) {
     var arr = [];
 
     for (var i = 0; i < num; i++) {
@@ -17,7 +17,7 @@ var printQuestionMarks = num => {
 }
 
 // Helper function to convert object key/value pairs to SQL syntax
-var objToSql = ob => {
+function objToSql(ob) {
     var arr = [];
 
     // loop through the keys and push the key/value as a string int arr
@@ -25,12 +25,12 @@ var objToSql = ob => {
         var value = ob[key];
         // check to skip hidden properties
         if (Object.hasOwnProperty.call(ob, key)) {
-            // if string with spaces, add quotations (bacon => 'bacon')
+            // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
             if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
-            // e.g. {burger: 'bacon'} => ["name='bacon'"]
-            // e.g. {devoured: true} => ["devoured=true"]
+            // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
+            // e.g. {sleepy: true} => ["sleepy=true"]
             arr.push(key + "=" + value);
         }
     }

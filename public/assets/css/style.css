@@ -1,19 +1,36 @@
+body {
+    background-image: url("../img/burger.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+}
+
+.burger-header {
+    margin-top: 5%;
+    color: white;
+}
+
 li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
 }
 
 .label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+.create-form {
+    padding: 5px;
+    margin: 5px;
+}
+
+.burger-controls {
+    padding: 10px;
+    background: white;
+    opacity: .75;
 }
 
 .form-group {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
